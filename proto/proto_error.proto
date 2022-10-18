@@ -1,0 +1,10 @@
+syntax = "proto3";
+option go_package = "./proto";
+
+package proto;
+
+message Error{
+  string code = 1;
+  string msg = 2;
+  map<string, string> metadata = 3;
+}

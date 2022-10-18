@@ -1,0 +1,19 @@
+syntax = "proto3";
+option go_package = "./proto";
+
+package proto;
+
+
+import "proto_request.proto";
+import "proto_response.proto";
+import "proto_push.proto";
+import "proto_bind.proto";
+import "proto_kick.proto";
+
+service App {
+    rpc Call (proto.Request) returns (proto.Response) {}
+    rpc PushToUser(proto.Push) returns (proto.Response){}
+    rpc SessionBindRemote(proto.BindMsg) returns (proto.Response){}
+    rpc KickUser(proto.KickMsg) returns (proto.Response){}
+}
+

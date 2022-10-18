@@ -1,0 +1,9 @@
+syntax = "proto3";
+option go_package = "./proto";
+
+package proto;
+
+message BindMsg{
+  string uid = 1;
+  string fid = 2;
+}
